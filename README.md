@@ -10,9 +10,5 @@ Create very isolated projects with docker with no shared services or containers.
    1. Use environmental variables to change parameters in settings: DEBUG, SECRET_KEY, DJANGO_ALLOWED_HOSTS, CSRF_TRUSTED_ORIGINS
 6. simple-django-project-with-postgres ==> localhost:8006
    1. Use environmental variables to change postgres parameters in settings
-* CURRENT STEP:
 7. simple-django-project-with-postgres-and-media = demo-django-project ==> localhost:8007
-   1. Add a backup service for: database and media
 8. demo-django-project as registry image ==> 8008
-9. Backup and load database and media via GitHub
-10. ANSIBLE: simple-html-1 (without ssl), simple-html-2 (with ssl), demo-django-project (with ssl), SECRET_KEY etc.
