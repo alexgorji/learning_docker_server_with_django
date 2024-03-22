@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  backend:
+    build: ./simple-django-project
+    command: gunicorn simple_django_project.wsgi:application --bind 0.0.0.0:8000
+    expose:
+      - 8000
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d
+    ports:
+      - "8003:8003"

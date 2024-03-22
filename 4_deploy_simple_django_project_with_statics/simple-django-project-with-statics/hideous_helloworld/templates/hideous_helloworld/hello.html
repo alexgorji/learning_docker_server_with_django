@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hideous Hello!</title>
+    <link rel="stylesheet" href="{% static 'hideous_helloworld/style.css' %}">
+</head>
+<body>
+<div class="main-div">
+    <p>Hello world! My name is Django. I live inside a container.</p>
+    <div>If the background does not have a disgusting color, it means that your css was not found! The only purpose
+        of using css here is to make sure that the static files are found. It will look hideous anyway.
+    </div>
+</div>
+</body>
+</html>

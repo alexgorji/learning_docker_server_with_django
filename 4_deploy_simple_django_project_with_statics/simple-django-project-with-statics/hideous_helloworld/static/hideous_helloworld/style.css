@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+
+p {
+    margin: 0 10px 0 0
+}
+
+.main-div {
+    background: antiquewhite;
+    padding: 1em 1em 1em 1em;
+    height: 100%;
+}
