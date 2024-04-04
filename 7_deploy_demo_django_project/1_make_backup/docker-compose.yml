@@ -16,13 +16,13 @@ services:
       - media_volume:/var/www/app/protected
       - backup_volume:/var/www/app/backup
     env_file:
-      - ./.env.dev
+      - ../.env.dev
     expose:
       - 8000
     depends_on:
       - db
   db:
-    build: ./postgres
+    build: ../postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
       - backup_volume:/var/usr/backup
