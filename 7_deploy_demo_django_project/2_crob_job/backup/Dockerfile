@@ -6,4 +6,6 @@ RUN mkdir -p /var/usr/backup/
 
 COPY . .
 
-CMD ["tail", "-f", "/dev/null"]
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["/var/usr/scripts/entrypoint.sh"]
