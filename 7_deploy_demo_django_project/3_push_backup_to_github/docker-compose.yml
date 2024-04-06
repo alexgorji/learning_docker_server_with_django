@@ -44,6 +44,20 @@ services:
       - "8007:8007"
     depends_on:
       - backend
+  git-backup:
+    build: ./git-backup
+    container_name: git-backup
+    volumes:
+      - ../sshkey:/var/usr/git/sshkey
+      - backup_volume:/var/usr/git/backup/backup-data
+
+    environment:
+      - SSHKEY_PATH=/var/usr/git/sshkey
+      - GITHUB_USER_EMAIL=alexgorji@hotmail.com
+      - GITHUB_USER_NAME=alexgorji-django-server
+      - BACKUP_REPOSITORY=git@github.com:alexgorji/demo-docker-backup.git
+      - BACKUP_DATA_PATH=/var/usr/git/backup/backup-data
+      - BACKUP_REPOSITORY_NAME=demo-docker-backup
   backup:
     build: ./backup
     privileged: true
@@ -55,6 +69,7 @@ services:
     depends_on:
       - backend
       - db
+      - git-backup
 
 volumes:
   static_volume:
