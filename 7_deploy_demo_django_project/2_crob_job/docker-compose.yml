@@ -3,7 +3,6 @@ version: '3'
 services:
   backend:
     build: ../../demo-django-project
-    container_name: backend
     command:
       - sh
       - -c
@@ -24,7 +23,6 @@ services:
       - db
   db:
     build: ../postgres
-    container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data/
       - backup_volume:/var/usr/backup
@@ -44,15 +42,6 @@ services:
       - "8007:8007"
     depends_on:
       - backend
-  backup:
-    build: ./backup
-    privileged: true
-    volumes:
-      - backup_volume:/var/usr/backup
-      - /var/run/docker.sock:/var/run/docker.sock
-    depends_on:
-      - backend
-      - db
 
 volumes:
   static_volume:
