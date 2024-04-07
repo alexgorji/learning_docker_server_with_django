@@ -3,7 +3,7 @@
 
 cd ~/"$BACKUP_REPOSITORY_NAME"
 
-cp -r "$BACKUP_DATA_PATH/" .
+cp -r "$BACKUP_DATA_PATH"/. .
 
 git add .
 if git status | grep "nothing to commit" >/dev/null; then

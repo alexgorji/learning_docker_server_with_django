@@ -17,8 +17,6 @@ COPY --chown=git:git ./entrypoint.sh .
 COPY --chown=git:git ./create_backup.sh .
 
 RUN chmod +x /var/usr/git/entrypoint.sh
-#RUN chmod +x /var/usr/git/create_backup.sh
-
 
 
 ENTRYPOINT ["/var/usr/git/entrypoint.sh"]
