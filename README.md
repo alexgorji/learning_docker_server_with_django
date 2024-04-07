@@ -16,4 +16,4 @@ Create very isolated projects with docker with no shared services or containers.
    3. GitHub:
       1. Push backup to GitHub
       2. Pull backup from GitHub and load
-8. demo-django-project as registry image ==> 8008
+      3. Add  demo-django-project as registry image
