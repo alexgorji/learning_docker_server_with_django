@@ -5,7 +5,6 @@ if [[ -z "$SSHKEY_PATH" || -z "$BACKUP_REPOSITORY" || -z "$BACKUP_REPOSITORY_NAM
     exit 1
 fi
 
-
 git config --global user.name "$GITHUB_USER_NAME"
 git config --global user.email "$GITHUB_USER_EMAIL"
 

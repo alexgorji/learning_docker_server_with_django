@@ -13,6 +13,7 @@ Create very isolated projects with docker with no shared services or containers.
 7. simple-django-project-with-postgres-and-media = demo-django-project ==> localhost:8007
    1. Make backup of database and media
    2. Set up a cron job for creating backups
-   3. Push backup to GitHub
-   4. Pull backup from GitHub and load
+   3. GitHub:
+      1. Push backup to GitHub
+      2. Pull backup from GitHub and load
 8. demo-django-project as registry image ==> 8008
