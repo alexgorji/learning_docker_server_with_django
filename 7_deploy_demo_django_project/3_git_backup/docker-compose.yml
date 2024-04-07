@@ -18,7 +18,7 @@ services:
       - media_volume:/var/www/app/protected
       - backup_volume:/var/www/app/backup-data
     env_file:
-      - ../.env.dev
+      - ../.demo-django-env.dev
     expose:
       - 8000
     depends_on:
