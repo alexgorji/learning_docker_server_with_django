@@ -5,13 +5,14 @@ if [[ -z "$SSHKEY_PATH" || -z "$BACKUP_REPOSITORY" || -z "$BACKUP_REPOSITORY_NAM
     exit 1
 fi
 
+#mkdir -p $BACKUP_DATA_PATH
 git config --global user.name "$GITHUB_USER_NAME"
 git config --global user.email "$GITHUB_USER_EMAIL"
 
 cp "$SSHKEY_PATH"/id_rsa ~/.ssh/id_rsa
 cp "$SSHKEY_PATH"/id_rsa.pub ~/.ssh/id_rsa.pub
 
-chown -R git:git ~/.ssh
+#chown -R git:git ~/.ssh
 
 cd ~ || exit
 

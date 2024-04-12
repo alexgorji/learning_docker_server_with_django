@@ -13,5 +13,6 @@ fi
 git pull --rebase
 
 echo copying backup-data to repository
-cp -r ./backup-data/. "$BACKUP_DATA_PATH"/
+
+cp -r ./backup-data/* "$BACKUP_DATA_PATH"/
 echo done

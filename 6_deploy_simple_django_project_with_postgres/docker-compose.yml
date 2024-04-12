@@ -14,7 +14,7 @@ services:
     volumes:
       - static_volume:/var/www/app/staticfiles
     env_file:
-      - ./.env.dev
+      - ./.demo-django-env.dev
     expose:
       - 8000
     depends_on:

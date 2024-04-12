@@ -15,19 +15,20 @@ services:
     volumes:
       - static_volume:/var/www/app/staticfiles
       - media_volume:/var/www/app/protected
-      - backup_volume:/var/www/app/backup
+      - backup_volume:/var/www/app/backup-data
     env_file:
       - ../.demo-django-env.dev
     expose:
       - 8000
     depends_on:
       - db
+
   db:
     build: ../postgres
     container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-      - backup_volume:/var/usr/backup
+      - backup_volume:/var/usr/backup-data
     environment:
       - POSTGRES_USER=ansibleadmin
       - POSTGRES_PASSWORD=password
@@ -44,9 +45,9 @@ services:
       - "8007:8007"
     depends_on:
       - backend
+
   backup:
     build: ./backup
-    privileged: true
     volumes:
       - backup_volume:/var/usr/backup
       - /var/run/docker.sock:/var/run/docker.sock
