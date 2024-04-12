@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cd ~/"$BACKUP_REPOSITORY_NAME"
+cd "$BACKUP_REPOSITORY_NAME"
 
 mkdir -p ./backup-data
 cp -r "$BACKUP_DATA_PATH"/. ./backup-data/

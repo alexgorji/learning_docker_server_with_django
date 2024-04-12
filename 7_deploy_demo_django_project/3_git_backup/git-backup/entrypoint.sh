@@ -9,12 +9,9 @@ fi
 git config --global user.name "$GITHUB_USER_NAME"
 git config --global user.email "$GITHUB_USER_EMAIL"
 
-cp "$SSHKEY_PATH"/id_rsa ~/.ssh/id_rsa
-cp "$SSHKEY_PATH"/id_rsa.pub ~/.ssh/id_rsa.pub
+cp "$SSHKEY_PATH"/id_rsa /root/.ssh/id_rsa
+cp "$SSHKEY_PATH"/id_rsa.pub /root/.ssh/id_rsa.pub
 
-#chown -R git:git ~/.ssh
-
-cd ~ || exit
 
 git clone "$BACKUP_REPOSITORY"
 

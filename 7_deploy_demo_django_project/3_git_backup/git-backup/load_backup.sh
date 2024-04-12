@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-cd ~/"$BACKUP_REPOSITORY_NAME"
+cd "$BACKUP_REPOSITORY_NAME"
 
 git add .
 if git status | grep "nothing to commit" >/dev/null; then
