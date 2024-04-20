@@ -2,8 +2,8 @@ version: '3'
 
 services:
   backend:
-    build: ../../demo-django-project
-#    image: "ghcr.io/alexgorji/demo-django-project:0.1"
+#    build: ../../demo-django-project
+    image: "ghcr.io/alexgorji/demo-django-project:0.1"
     container_name: demo-backend
     command:
       - sh
