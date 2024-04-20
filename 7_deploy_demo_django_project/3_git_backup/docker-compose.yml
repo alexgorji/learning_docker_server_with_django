@@ -68,7 +68,7 @@ services:
       - backup_volume:/var/usr/backup
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
-      - CRON_MINUTE=1
+      - CRON_MINUTE=10
     depends_on:
       - backend
       - db
