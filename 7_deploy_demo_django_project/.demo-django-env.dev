@@ -1,5 +1,6 @@
 DEBUG=1
 SECRET_KEY=foo
+CSRF_TRUSTED_ORIGINS=http://localhost:8007
 ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
 SQL_ENGINE=django.db.backends.postgresql
 SQL_DATABASE=simple_django_tasks

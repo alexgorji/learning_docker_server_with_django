@@ -12,7 +12,7 @@ services:
         gunicorn demo_django_project.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - static_volume:/var/www/app/staticfiles
-      - media_volume:/var/www/app/protected
+      - media_volume:/var/www/app/media
     env_file:
       - ../.demo-django-env.dev
     expose:
@@ -34,7 +34,7 @@ services:
       - ../nginx/nginx.conf:/etc/nginx/nginx.conf:ro
       - ../nginx/conf.d:/etc/nginx/conf.d
       - static_volume:/var/www/app/staticfiles
-      - media_volume:/var/www/app/protected
+      - media_volume:/var/www/app/media
     ports:
       - "8007:8007"
     depends_on:
